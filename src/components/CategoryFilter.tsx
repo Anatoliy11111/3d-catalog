@@ -34,7 +34,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
           { label: 'Все категории', value: 'all' },
           ...categories.map((cat) => ({ label: cat, value: cat })),
         ]}
-        style={{ width: 200 }}
+        style={{ width: 200, borderRadius: '16px' }}
         size="large"
       />
     </div>

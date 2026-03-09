@@ -6,48 +6,52 @@ import { Header } from './components/Header';
 import { CategoryFilter } from './components/CategoryFilter';
 import { ProductGrid } from './components/ProductGrid';
 import { ProductDetail } from './components/ProductDetail';
+import { FloatingCart } from './components/FloatingCart';
 import { products } from './data/products';
 import type { Product } from './types/product';
 import './App.css';
 
 const { Content } = Layout;
 
-const TELEGRAM_USERNAME = import.meta.env.VITE_TELEGRAM_USERNAME;
+const TELEGRAM_USERNAME = 'arissha14';
 
-// Midnight Purple Theme Configuration
-const goldenPurpleTheme: ThemeConfig = {
+// Apple-style Theme Configuration
+const appleTheme: ThemeConfig = {
   token: {
-    colorPrimary: '#6366f1',
-    colorSuccess: '#8b5cf6',
-    colorBgLayout: '#f5f3ff',
+    colorPrimary: '#0071e3',
+    colorSuccess: '#34c759',
+    colorBgLayout: '#ffffff',
     colorBgContainer: '#ffffff',
-    colorText: '#1f2937',
-    colorTextSecondary: '#6b7280',
+    colorText: '#1d1d1f',
+    colorTextSecondary: '#86868b',
     borderRadius: 12,
-    fontSize: 14,
-    colorLink: '#6366f1',
-    colorLinkHover: '#8b5cf6',
-    colorLinkActive: '#4f46e5',
+    fontSize: 15,
+    colorLink: '#0071e3',
+    colorLinkHover: '#0077ed',
+    colorLinkActive: '#005bb5',
+    colorBorder: '#d2d2d7',
+    colorFillSecondary: '#f5f5f7',
   },
   components: {
     Card: {
       colorBgContainer: '#ffffff',
-      colorBorderSecondary: '#ddd6fe',
+      colorBorderSecondary: '#d2d2d7',
     },
     Button: {
-      colorPrimary: '#6366f1',
-      colorPrimaryHover: '#8b5cf6',
-      colorPrimaryActive: '#4f46e5',
+      colorPrimary: '#0071e3',
+      colorPrimaryHover: '#0077ed',
+      colorPrimaryActive: '#005bb5',
+      algorithm: true,
     },
     Select: {
       colorBgContainer: '#ffffff',
-      colorBorder: '#ddd6fe',
+      colorBorder: '#d2d2d7',
     },
     Checkbox: {
-      colorPrimary: '#6366f1',
+      colorPrimary: '#0071e3',
     },
     Badge: {
-      colorPrimary: '#8b5cf6',
+      colorPrimary: '#0071e3',
     },
     Modal: {
       colorBgContainer: '#ffffff',
@@ -132,14 +136,9 @@ ${selectedProducts.map((p, i) => `${i + 1}. ${p.name} — ${p.price.toLocaleStri
   };
 
   return (
-    <ConfigProvider locale={ruRU} theme={goldenPurpleTheme}>
+    <ConfigProvider locale={ruRU} theme={appleTheme}>
       <Layout className="app-layout">
-        <Header
-          selectedCount={selectedProductIds.length}
-          selectedProducts={selectedProducts}
-          onOrder={handleOrder}
-          onClear={handleClearSelection}
-        />
+        <Header />
         <Content className="app-content">
           <div className="content-wrapper">
             <div className="filters-section">
@@ -160,6 +159,12 @@ ${selectedProducts.map((p, i) => `${i + 1}. ${p.name} — ${p.price.toLocaleStri
           product={detailProduct}
           open={!!detailProduct}
           onClose={handleCloseDetail}
+        />
+        <FloatingCart
+          selectedCount={selectedProductIds.length}
+          selectedProducts={selectedProducts}
+          onOrder={handleOrder}
+          onClear={handleClearSelection}
         />
       </Layout>
     </ConfigProvider>
