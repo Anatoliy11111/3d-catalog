@@ -53,7 +53,7 @@ body {
 .header-title {
   margin: 0 !important;
   color: #ffffff !important;
-  font-size: 24px;
+  font-size: 24px !important;
   line-height: 1;
 }
 
@@ -396,11 +396,11 @@ body {
   }
 
   .header-title {
-    font-size: 20px;
+    font-size: 16px !important;
   }
 
   .header-icon {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .header-order {

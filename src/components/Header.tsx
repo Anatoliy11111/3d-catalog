@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ selectedCount, selectedProducts,
       <div className="header-content">
         <div className="header-brand">
           <Avatar src={'/images/logo36.png'} size={36} style={{background:'rgb(245, 243, 255)'}}/>
-          <Title level={2} className="header-title">
+          <Title level={5} className="header-title">
             3-Д Мастерская Черепановых
           </Title>
           {selectedCount > 0 && (
