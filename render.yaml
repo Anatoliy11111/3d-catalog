@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: cherepanov3d
+    name: cherepanovstudio
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
