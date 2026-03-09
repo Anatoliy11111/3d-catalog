@@ -26,7 +26,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, open, onC
       centered
     >
       <div className="product-detail-content">
-        <ProductCarousel product={product} />
+        <ProductCarousel product={product} autoplay={false} showArrows={true} />
         <div className="product-detail-info">
           <Space direction="vertical" size="middle" style={{ width: '100%' }}>
             <div className="product-detail-header">

@@ -13,7 +13,7 @@ import './App.css';
 
 const { Content } = Layout;
 
-const TELEGRAM_USERNAME = 'arissha14';
+const TELEGRAM_USERNAME = import.meta.env.VITE_TELEGRAM_USERNAME;
 
 // Apple-style Theme Configuration
 const appleTheme: ThemeConfig = {
