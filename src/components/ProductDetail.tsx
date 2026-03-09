@@ -1,7 +1,6 @@
 import { Modal, Typography, Space, Tag } from 'antd';
 import type { Product } from '../types/product';
 import { ProductCarousel } from './ProductCarousel';
-import { useToken } from '../hooks/useToken';
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -12,8 +11,6 @@ interface ProductDetailProps {
 }
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product, open, onClose }) => {
-  const { token } = useToken();
-
   if (!product) return null;
 
   return (
@@ -31,11 +28,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, open, onC
           <Space direction="vertical" size="middle" style={{ width: '100%' }}>
             <div className="product-detail-header">
               <Title level={3} style={{ margin: 0 }}>{product.name}</Title>
-              <Tag color={token.colorPrimary} className="detail-category-tag">{product.category}</Tag>
+              <Tag className="detail-category-tag">{product.category}</Tag>
             </div>
-            <Text className="detail-price" style={{ color: token.colorPrimary }}>{product.price.toLocaleString('ru-RU')} ₽</Text>
+            <Text className="detail-price">{product.price.toLocaleString('ru-RU')} ₽</Text>
             <Paragraph className="detail-description">{product.description}</Paragraph>
-            <div className="detail-material" style={{ background: token.colorBgLayout }}>
+            <div className="detail-material">
               <Text strong>Материал:</Text>
               <Text>{product.material}</Text>
             </div>

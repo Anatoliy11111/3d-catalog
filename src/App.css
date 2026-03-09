@@ -474,6 +474,23 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #86868b;
+  background: #f5f5f7 !important;
+  border: none !important;
+}
+
+.product-detail-modal .ant-tag {
+  background: #f5f5f7 !important;
+  color: #86868b !important;
+  border: none !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 4px 12px !important;
+}
+
+.product-detail-modal .ant-modal-title {
+  color: #1d1d1f !important;
 }
 
 .detail-price {
@@ -490,12 +507,17 @@ body {
 }
 
 .detail-material {
-  padding: 16px 0;
+  padding: 16px 20px;
   border-radius: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #f5f5f7;
+}
+
+.detail-material .ant-typography,
+.detail-material .ant-typography-strong {
+  color: #1d1d1f !important;
 }
 
 .detail-material-label {
@@ -665,13 +687,18 @@ body {
   }
 
   /* Product Detail Modal */
-  .product-detail-modal .ant-modal-content {
+  .product-detail-modal .ant-modal-container {
     background: #1d1d1f !important;
   }
+  
 
   .product-detail-modal .ant-modal-header {
     background: #1d1d1f !important;
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .product-detail-modal .ant-modal-body {
+    background: #1d1d1f !important;
   }
 
   .product-detail-modal .ant-modal-title {
@@ -690,8 +717,31 @@ body {
     color: #f5f5f7 !important;
   }
 
+  .product-detail-modal .product-carousel {
+    background: #000000 !important;
+  }
+
+  .product-detail-modal .carousel-slide {
+    background: #000000 !important;
+  }
+
+  .product-detail-modal .carousel-dots div {
+    background: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .product-detail-modal .carousel-dots .slick-active div {
+    background: #ffffff !important;
+  }
+
+  .product-detail-modal .ant-tag {
+    background: #2d2d2f !important;
+    color: #a1a1a6 !important;
+    border: none !important;
+  }
+
   .detail-category-tag {
-    color: #86868b !important;
+    color: #a1a1a6 !important;
+    background: #2d2d2f !important;
   }
 
   .detail-price {
@@ -706,12 +756,25 @@ body {
     background: #2d2d2f !important;
   }
 
+  .detail-material .ant-typography,
+  .detail-material .ant-typography-strong {
+    color: #f5f5f7 !important;
+  }
+
   .detail-material-label {
     color: #a1a1a6 !important;
   }
 
   .detail-material-value {
     color: #f5f5f7 !important;
+  }
+
+  .product-detail-modal .ant-typography {
+    color: #f5f5f7 !important;
+  }
+
+  .product-detail-modal .ant-typography-secondary {
+    color: #a1a1a6 !important;
   }
 
   .ant-btn-default {
