@@ -12,7 +12,7 @@ import './App.css';
 
 const { Content } = Layout;
 
-const TELEGRAM_USERNAME = 'arissha14';
+const TELEGRAM_USERNAME = import.meta.env.VITE_TELEGRAM_USERNAME;
 
 // Midnight Purple Theme Configuration
 const goldenPurpleTheme: ThemeConfig = {
