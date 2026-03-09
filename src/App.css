@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* Prevent zoom on mobile taps */
+html {
+  touch-action: manipulation;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
 .app-layout {
   min-height: 100vh;
   background: var(--ant-color-bg-layout, #f5f3ff);
@@ -360,6 +369,15 @@
 
   .category-filter .ant-select {
     width: 100% !important;
+  }
+
+  /* Fix Select dropdown on mobile */
+  .category-filter .ant-select-selector {
+    touch-action: manipulation;
+  }
+
+  .ant-select-dropdown {
+    z-index: 9999 !important;
   }
 
   .app-header {

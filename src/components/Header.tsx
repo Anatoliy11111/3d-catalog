@@ -18,11 +18,10 @@ export const Header: React.FC<HeaderProps> = ({ selectedCount, selectedProducts,
   const totalPrice = selectedProducts.reduce((sum, p) => sum + p.price, 0);
 
   return (
-    <AntHeader className="app-header" style={{ background: token.colorPrimary, borderRadius: '16px' }}>
+    <AntHeader className="app-header" style={{ background: token.colorPrimary, borderRadius: '0 0 16px 16px' }}>
       <div className="header-content">
         <div className="header-brand">
-          {/* <ShoppingOutlined className="header-icon" /> */}
-          <Avatar src={'src/data/images/logo36.png'} size={36} style={{background:'rgb(245, 243, 255)'}}/>
+          <Avatar src={'/images/logo36.png'} size={36} style={{background:'rgb(245, 243, 255)'}}/>
           <Title level={2} className="header-title">
             3-Д Мастерская Черепановых
           </Title>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Select } from 'antd';
 import { FilterOutlined } from '@ant-design/icons';
 import { useToken } from '../hooks/useToken';
@@ -14,13 +15,21 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
   onCategoryChange,
 }) => {
   const { token } = useToken();
+  const [open, setOpen] = useState(false);
+
+  const handleChange = (value: string) => {
+    onCategoryChange(value);
+    setOpen(false);
+  };
 
   return (
     <div className="category-filter">
       <FilterOutlined style={{ marginRight: 8, color: token.colorPrimary }} />
       <Select
         value={selectedCategory}
-        onChange={onCategoryChange}
+        onChange={handleChange}
+        open={open}
+        onOpenChange={setOpen}
         options={[
           { label: 'Все категории', value: 'all' },
           ...categories.map((cat) => ({ label: cat, value: cat })),
