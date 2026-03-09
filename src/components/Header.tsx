@@ -1,5 +1,5 @@
-import { Layout, Typography, Space, Badge, Button } from 'antd';
-import { ShoppingOutlined, SendOutlined } from '@ant-design/icons';
+import { Layout, Typography, Space, Badge, Button, Avatar } from 'antd';
+import {  SendOutlined } from '@ant-design/icons';
 import { useToken } from '../hooks/useToken';
 import type { Product } from '../types/product';
 
@@ -21,9 +21,10 @@ export const Header: React.FC<HeaderProps> = ({ selectedCount, selectedProducts,
     <AntHeader className="app-header" style={{ background: token.colorPrimary, borderRadius: '16px' }}>
       <div className="header-content">
         <div className="header-brand">
-          <ShoppingOutlined className="header-icon" />
+          {/* <ShoppingOutlined className="header-icon" /> */}
+          <Avatar src={'src/data/images/logo36.png'} size={36} style={{background:'rgb(245, 243, 255)'}}/>
           <Title level={2} className="header-title">
-            3D Catalog
+            3-Д Мастерская Черепановых
           </Title>
           {selectedCount > 0 && (
             <Badge

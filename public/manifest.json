@@ -1,0 +1,20 @@
+{
+  "name": "3-Д Мастерская Черепановых | 3D печать и моделирование",
+  "short_name": "3-Д Мастерская Черепановых",
+  "description": "3D печать и моделирование на заказ. Быстрое изготовление, качественные материалы.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f3ff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ru",
+  "categories": ["shopping", "business"]
+}
